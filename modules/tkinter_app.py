@@ -79,19 +79,3 @@ class MainCodeOfApp:
     def get_buttons(self):
         pass
 
-        # # Position button
-        # left_button_x = round(0.5 * self.screen_width) - 70
-        # right_button_x = round(0.5 * self.screen_width) - 330
-        # exit_button_x = round(0.5 * self.screen_width) + 190
-        # button_y = round(0.67 * self.screen_height)
-        #
-        # # Add buttons
-        #
-        # # button1 = tk.Button(self.frame, text="Start program", command=self.get_gallery, borderwidth=5)
-        # # button2 = tk.Button(self.frame, text="AIR Concept", command=self.callback, borderwidth=5)
-        # # button3 = tk.Button(self.frame, text="Exit", command=quit, borderwidth=5)
-        #
-        # # Dimensions and location of buttons
-        # self.my_canvas.create_window(right_button_x, button_y, anchor="nw", window=button1, height=60, width=150)
-        # self.my_canvas.create_window(left_button_x, button_y, anchor="nw", window=button2, height=60, width=150)
-        # self.my_canvas.create_window(exit_button_x, button_y, anchor="nw", window=button3, height=60, width=150)
