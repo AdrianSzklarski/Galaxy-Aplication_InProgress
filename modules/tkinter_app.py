@@ -16,6 +16,7 @@ class MainCodeOfApp:
 
         self.screen_width = root.winfo_screenwidth()
         self.screen_height = root.winfo_screenheight()
+        print(self.screen_width, self.screen_height)
 
         # canvas
         self.my_canvas = tk.Canvas(self.frame, width=self.screen_width, height=self.screen_height, bg='white')
@@ -24,6 +25,7 @@ class MainCodeOfApp:
         # calling modules
         self.get_settings_window()
         self.get_background()
+        self.get_welcome()
 
     def get_settings_window(self):
         """
@@ -34,7 +36,9 @@ class MainCodeOfApp:
         @rtype: object
         """
         self.root.title("Task Application by Adrian Szklarski, 2022")
-        self.root.geometry(f"{self.screen_width}x{self.screen_height}")
+        self.root.geometry(f"{round(self.screen_width*0.45)}x{round(self.screen_height*0.85)}")
+        self.root.resizable(False, False)
+
 
     def get_background(self):
         """
@@ -51,4 +55,43 @@ class MainCodeOfApp:
         self.bg = tk.PhotoImage(file=link_of_background + "background.png")
         self.my_canvas.create_image(0, 0, image=self.bg, anchor="nw")
 
+    def get_welcome(self):
+        #  Welcome text
+        title = """Learning is easy, programming is easy"""
+        welcome = """WELCOME TO MY PROGRAM"""
+        signature ="Adrian Szklarski"
 
+        self.my_canvas.create_text(self.screen_width * 0.45 * 0.5, 80,
+                                   text=title,
+                                   font=("Helvetica", 40),
+                                   justify='center', fill="white")
+
+        self.my_canvas.create_text(self.screen_width * 0.45 * 0.5, 200,
+                                   text=welcome,
+                                   font=("Batang", 50),
+                                   justify='center', fill="black")
+
+        self.my_canvas.create_text(self.screen_width * 0.45 * 0.69, 290,
+                                   text=signature,
+                                   font=("Purisa", 20, 'italic'),
+                                   justify='center', fill="black")
+
+    def get_buttons(self):
+        pass
+
+        # # Position button
+        # left_button_x = round(0.5 * self.screen_width) - 70
+        # right_button_x = round(0.5 * self.screen_width) - 330
+        # exit_button_x = round(0.5 * self.screen_width) + 190
+        # button_y = round(0.67 * self.screen_height)
+        #
+        # # Add buttons
+        #
+        # # button1 = tk.Button(self.frame, text="Start program", command=self.get_gallery, borderwidth=5)
+        # # button2 = tk.Button(self.frame, text="AIR Concept", command=self.callback, borderwidth=5)
+        # # button3 = tk.Button(self.frame, text="Exit", command=quit, borderwidth=5)
+        #
+        # # Dimensions and location of buttons
+        # self.my_canvas.create_window(right_button_x, button_y, anchor="nw", window=button1, height=60, width=150)
+        # self.my_canvas.create_window(left_button_x, button_y, anchor="nw", window=button2, height=60, width=150)
+        # self.my_canvas.create_window(exit_button_x, button_y, anchor="nw", window=button3, height=60, width=150)
