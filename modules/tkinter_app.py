@@ -2,6 +2,12 @@ from tkinter import Image
 import tkinter as tk
 from PIL import Image, ImageTk
 
+CONST_SCREEN_HEIGHT_MORE = 0.85
+
+CONST_SCREEN_WIDTH_MORE = 0.45
+
+CONST_SCREEN_WIDTH_LESS = 0.9
+
 
 class MainCodeOfApp:
     def __init__(self, root):
@@ -36,12 +42,19 @@ class MainCodeOfApp:
         @rtype: object
         """
         self.root.title("Task Application by Adrian Szklarski, 2022")
-        self.root.geometry(f"{round(self.screen_width*0.45)}x{round(self.screen_height*0.85)}")
+        if self.screen_width <= 2048:
+            self.root.geometry(
+                f"{round(self.screen_width * CONST_SCREEN_WIDTH_LESS)}x{round(self.screen_height * CONST_SCREEN_WIDTH_LESS)}")
+        elif 2048 < self.screen_width < 4096:
+            self.root.geometry(
+                f"{round(self.screen_width * CONST_SCREEN_WIDTH_MORE)}x{round(self.screen_height * CONST_SCREEN_HEIGHT_MORE)}")
+        else:
+            print('Change your monitor resolution below 4096px')
+
         self.root.resizable(False, False)
 
-
     def get_background(self):
-        """
+        """/
         The method applies a background to the application:
         Input: global width and height of the monitor window
         Performs scaling and converting *.*jpg to *.*png
@@ -59,23 +72,29 @@ class MainCodeOfApp:
         #  Welcome text
         title = """Learning is easy, programming is easy"""
         welcome = """WELCOME TO MY PROGRAM"""
-        signature ="Adrian Szklarski"
+        signature = "Adrian Szklarski"
 
-        self.my_canvas.create_text(self.screen_width * 0.45 * 0.5, 80,
+        if self.screen_width <= 2048:
+            positionX = CONST_SCREEN_WIDTH_LESS
+            positionY = CONST_SCREEN_WIDTH_LESS/2
+        elif 2048 < self.screen_width < 4096:
+            positionX = CONST_SCREEN_WIDTH_MORE
+            positionY = CONST_SCREEN_HEIGHT_MORE/2
+
+
+        self.my_canvas.create_text(self.screen_width * positionX * 0.5, positionY+80,
                                    text=title,
                                    font=("Helvetica", 40),
                                    justify='center', fill="white")
 
-        self.my_canvas.create_text(self.screen_width * 0.45 * 0.5, 200,
+        self.my_canvas.create_text(self.screen_width * positionX  * 0.5, positionY+200,
                                    text=welcome,
                                    font=("Batang", 50),
                                    justify='center', fill="black")
 
-        self.my_canvas.create_text(self.screen_width * 0.45 * 0.69, 290,
+        self.my_canvas.create_text(self.screen_width * positionX * 0.69, positionY+290,
                                    text=signature,
                                    font=("Purisa", 20, 'italic'),
                                    justify='center', fill="black")
-
     def get_buttons(self):
         pass
-
