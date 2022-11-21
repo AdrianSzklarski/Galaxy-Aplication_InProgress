@@ -2,6 +2,8 @@ from tkinter import Image
 import tkinter as tk
 from PIL import Image, ImageTk
 
+from modules.contents import Contents
+
 CONST_SCREEN_HEIGHT_MORE = 0.85
 
 CONST_SCREEN_WIDTH_MORE = 0.45
@@ -22,7 +24,7 @@ class MainCodeOfApp:
 
         self.screen_width = root.winfo_screenwidth()
         self.screen_height = root.winfo_screenheight()
-        print(self.screen_width, self.screen_height)
+        # print(self.screen_width, self.screen_height)
 
         # canvas
         self.my_canvas = tk.Canvas(self.frame, width=self.screen_width, height=self.screen_height, bg='white')
@@ -97,6 +99,9 @@ class MainCodeOfApp:
                                    text=signature,
                                    font=("Purisa", 20, 'italic'),
                                    justify='center', fill="black")
+    def get_content(self):
+        Contents()
+
 
     def get_buttons(self):
         # Positions of widget buttons
@@ -127,8 +132,10 @@ class MainCodeOfApp:
         start_scale = tk.PhotoImage(file="/home/adrian/Pulpit/my_application/photo/exitScale.png")
 
         # Add buttons
-        button1 = tk.Button(self.frame, borderwidth=5, image=exit_scale, text="Start program")
-        button2 = tk.Button(self.frame, text="Exit", command=quit, borderwidth=5, image=start_scale)
+        button1 = tk.Button(self.frame, text="Start program", borderwidth=5, image=exit_scale, fg='red',
+                            font='Times 28 bold', compound="center", command=self.get_content)
+        button2 = tk.Button(self.frame, text="Exit", command=quit, borderwidth=5, image=start_scale, fg='red',
+                            font='Times 28 bold', compound="center")
 
         # Dimensions and location of buttons
         self.my_canvas.create_window(positionX, positionY, anchor="nw", window=button1, height=_HEIGHT, width=_WIDTH)
