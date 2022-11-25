@@ -12,4 +12,6 @@ I am currently building the framework of the application in Tkinter.
 # License
 
 This project is under the MIT license.
-<h2
+
+<br>
+<h2 align="center">Created by Adrian Szklarski, start time 10.2022</h2>
