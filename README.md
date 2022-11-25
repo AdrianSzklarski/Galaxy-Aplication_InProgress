@@ -1,4 +1,4 @@
-# Tasks Application
+<h1 align="center">Galaxy Python Aplication</h1>
 
 <p> My application, used to learn programming, find solutions to programming and technical problems. In addition, the application includes an entertainment module that contains several games written by me, as well as a technical module that solves various technical problems mainly in aeronautical engineering. 
 
@@ -12,3 +12,4 @@ I am currently building the framework of the application in Tkinter.
 # License
 
 This project is under the MIT license.
+<h2
