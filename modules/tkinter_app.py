@@ -1,6 +1,6 @@
 from tkinter import Image
 import tkinter as tk
-from PIL import Image, ImageTk
+from PIL import Image
 
 from modules.contents import Contents
 
@@ -100,7 +100,8 @@ class MainCodeOfApp:
                                    font=("Purisa", 20, 'italic'),
                                    justify='center', fill="black")
     def get_content(self):
-        Contents()
+        app = Contents()
+        print(app)
 
 
     def get_buttons(self):
