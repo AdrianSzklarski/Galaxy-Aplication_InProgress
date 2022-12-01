@@ -10,6 +10,7 @@ CONST_SCREEN_WIDTH_LESS = 0.9
 
 
 class MainApp:
+    """A class that adds a background to a program"""
     def __init__(self, root):
         self.frame = None
         self.root = root
@@ -34,7 +35,6 @@ class MainApp:
         - height;
         - width;
         and enters the application title
-        @rtype: object
         """
         # Adjusting the window size to the screen
         self.root.title("Task Application by Adrian Szklarski, 2022")
@@ -50,12 +50,11 @@ class MainApp:
         self.root.resizable(False, False)
 
     def get_background(self):
-        """/
+        """
         The method applies a background to the application:
         Input: global width and height of the monitor window
         Performs scaling and converting *.*jpg to *.*png
         Output: Canvas, Frame
-        @rtype: object
         """
         link_of_background = r'/home/adrian/Pulpit/my_application/photo/'
         foto_background = Image.open(link_of_background + "photo1.jpg")

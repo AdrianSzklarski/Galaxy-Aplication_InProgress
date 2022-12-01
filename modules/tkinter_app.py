@@ -30,6 +30,7 @@ class FirstPageApp:
         self.get_buttons()
 
     def get_welcome(self):
+        """A method that adds text to the first page"""
         #  Welcome text
         title = """Learning is easy, programming is easy"""
         welcome = """WELCOME TO MY PROGRAM"""
@@ -62,6 +63,7 @@ class FirstPageApp:
         print(app)
 
     def get_buttons(self):
+        """Method to add an in and out button on the front page"""
         # Positions of widget buttons
         _WIDTH = 400
         _HEIGHT = 250
@@ -102,7 +104,3 @@ class FirstPageApp:
         self.my_canvas.create_window(self._positionX + (self._positionY * 1.2), self._positionY, anchor="nw", window=button2,
                                      height=_HEIGHT, width=_WIDTH)
 
-if __name__ == '__main__':
-    root = tk.Tk()
-    app = FirstPageApp(root)
-    root.mainloop()

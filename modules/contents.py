@@ -1,6 +1,3 @@
-# from modules.main_window import MainApp
-
-
 class Contents:
     def __init__(self, root):
         self.root = root
