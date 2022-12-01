@@ -11,6 +11,7 @@ CONST_SCREEN_WIDTH_MORE = 0.45
 
 CONST_SCREEN_WIDTH_LESS = 0.9
 
+
 class FirstPageApp:
     def __init__(self, root):
         self.root = root
@@ -89,15 +90,17 @@ class FirstPageApp:
         start_scale = tk.PhotoImage(file="/home/adrian/Pulpit/my_application/photo/exitScale.png")
 
         # Add buttons
-        button1 = tk.Button(self.frame, text="Start program", borderwidth=5, image=exit_scale, fg='red',
+        button1 = tk.Button(text="Start program", borderwidth=5, image=exit_scale, fg='red',
                             font='Times 28 bold', compound="center", command=self.get_content)
-        button2 = tk.Button(self.frame, text="Exit",  borderwidth=5, image=start_scale, fg='red',
+        button1.grid()
+        button2 = tk.Button(text="Exit", borderwidth=5, image=start_scale, fg='red',
                             font='Times 28 bold', compound="center", command=quit)
 
         # Dimensions and location of buttons
-        self.my_canvas.create_window(self._positionX, self._positionY, anchor="nw", window=button1, height=_HEIGHT, width=_WIDTH)
-        # self.my_canvas.create_window(self._positionX + (self._positionY * 1.2), self._positionY, anchor="nw", window=button2,
-        #                              height=_HEIGHT, width=_WIDTH)
+        self.my_canvas.create_window(self._positionX, self._positionY, anchor="nw", window=button1,
+                                     height=_HEIGHT, width=_WIDTH)
+        self.my_canvas.create_window(self._positionX + (self._positionY * 1.2), self._positionY, anchor="nw", window=button2,
+                                     height=_HEIGHT, width=_WIDTH)
 
 if __name__ == '__main__':
     root = tk.Tk()
