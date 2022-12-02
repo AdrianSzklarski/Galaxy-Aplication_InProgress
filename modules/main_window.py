@@ -63,7 +63,3 @@ class MainApp:
         self.bg = tk.PhotoImage(file=link_of_background + "background.png")
         self.get_canvas().create_image(0, 0, image=self.bg, anchor="nw")
 
-if __name__ == '__main__':
-    root = tk.Tk()
-    app = MainApp(root)
-    root.mainloop()
