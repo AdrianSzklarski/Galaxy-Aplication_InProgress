@@ -1,6 +1,8 @@
 <h1 align="center">Galaxy Python Aplication</h1>
 
 ![Main Page] (myPhoto/Page1.jpg)
+Test:
+![Logo Taat Technologie Cyfrowe](http://taat.pl/gfx/logo_taat.png "logo Taat")
 <br>
 
 <p style="text-align: center"> GPA - is my application for learning Python programming. In addition, in the application are solved unusual engineering tasks and classical problems primarily all at a minimum academic level. The application also contains technical issues of Data Science, Machine Learninig and Neural Networks. Ala relaxation I also wrote some simple games in my edition. </p>
