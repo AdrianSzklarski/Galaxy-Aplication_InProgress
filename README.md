@@ -1,6 +1,7 @@
 <h1 align="center">Galaxy Python Aplication</h1>
 
 ![MainPage] (Images/Page1.png "Main Page")
+<img src="Images/Page1.png" alt="MainPage">
 <br>
 
 <p style="text-align: center"> GPA - is my application for learning Python programming. In addition, in the application are solved unusual engineering tasks and classical problems primarily all at a minimum academic level. The application also contains technical issues of Data Science, Machine Learninig and Neural Networks. Ala relaxation I also wrote some simple games in my edition. </p>
