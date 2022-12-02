@@ -1,6 +1,6 @@
 import webbrowser
 
-from Tech.main_tech import Tech
+from tech.main_tech import Tech
 from aircraft.main_air import Air
 from arduino.main_adruino import Arduino
 from engineering.main_eng import Engineering
@@ -49,7 +49,7 @@ class Contents:
         file_menu.add_command(label="Missile", command=self.get_missile)
         file_menu.add_command(label="Programming", command=self.get_programming)
         file_menu.add_command(label="RecruitingTasks", command=self.get_recruiting)
-        file_menu.add_command(label="Tech&Python", command=self.get_tech)
+        file_menu.add_command(label="tech&Python", command=self.get_tech)
 
         # Help
         file_menu.add_cascade(label="Help", menu=helpmenu)
