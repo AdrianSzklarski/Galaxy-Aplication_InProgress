@@ -1,6 +1,5 @@
 <h1 align="center">Galaxy Python Aplication</h1>
 
-![MainPage] (Images/Page1.png "Main Page")
 <img src="Images/Page1.png" alt="MainPage">
 <br>
 
