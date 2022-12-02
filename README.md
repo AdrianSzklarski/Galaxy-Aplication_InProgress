@@ -1,17 +1,20 @@
 <h1 align="center">Galaxy Python Aplication</h1>
 
-<p> My application, used to learn programming, find solutions to programming and technical problems. In addition, the application includes an entertainment module that contains several games written by me, as well as a technical module that solves various technical problems mainly in aeronautical engineering. 
+Inline-style:
+![Main Page] (/home/adrian/Pulpit/my_application/myPhoto/Page1.png)
+<br>
+
+<p style="text-align: center"> GPA - is my application for learning Python programming. In addition, in the application are solved unusual engineering tasks and classical problems primarily all at a minimum academic level. The application also contains technical issues of Data Science, Machine Learninig and Neural Networks. Ala relaxation I also wrote some simple games in my edition. </p>
 
 <br>
-The application is "young", I started working on it so I am slowly building and updating it. On an ongoing basis, information about newly added functionality will appear in README.md.
+<p style="text-align: center">The application is "young", I started working on it so I am slowly building and updating it. On an ongoing basis, information about newly added functionality will appear in README.md.</p>
 
 <br>
-I am currently building the framework of the application in Tkinter. 
-</p>
+<p>I am currently building the framework of the application in Tkinter.</p>
 
 # License
 
-This project is under the MIT license.
+<p>This project is under the MIT license.</p>
 
 <br>
 <h2 align="center">Created by Adrian Szklarski, start time 10.2022</h2>

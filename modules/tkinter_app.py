@@ -93,7 +93,7 @@ class FirstPageApp:
         # Add buttons
         button1 = tk.Button(text="Start program", borderwidth=5, image=exit_scale, fg='red',
                             font='Times 28 bold', compound="center", command=self.get_content)
-        button1.grid()
+
         button2 = tk.Button(text="Exit", borderwidth=5, image=start_scale, fg='red',
                             font='Times 28 bold', compound="center", command=quit)
 

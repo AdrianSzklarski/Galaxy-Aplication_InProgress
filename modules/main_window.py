@@ -37,7 +37,7 @@ class MainApp:
         and enters the application title
         """
         # Adjusting the window size to the screen
-        self.root.title("Task Application by Adrian Szklarski, 2022")
+        self.root.title("Galaxy Python Aplication by Adrian Szklarski, 2022/2023")
         if self.screen_width <= 2048:
             self.root.geometry(
                 f"{round(self.screen_width * CONST_SCREEN_WIDTH_LESS)}x{round(self.screen_height * CONST_SCREEN_WIDTH_LESS)}")
