@@ -59,8 +59,7 @@ class FirstPageApp:
                                    justify='center', fill="black")
 
     def get_content(self):
-        app = Contents(self.frame)
-        print(app)
+        Contents(self.root)
 
     def get_buttons(self):
         """Method to add an in and out button on the front page"""
