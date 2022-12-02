@@ -1,6 +1,5 @@
 <h1 align="center">Galaxy Python Aplication</h1>
 
-Inline-style:
 ![Main Page] (myPhoto/Page1.jpg)
 <br>
 
