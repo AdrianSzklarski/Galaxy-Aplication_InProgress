@@ -30,7 +30,6 @@ class Contents:
         menu = tk.Menu(self.root)
         file_menu = tk.Menu(menu)
         self.root.config(menu=file_menu)
-        self.file_menu = menu
 
         filemenu = tk.Menu(file_menu, tearoff=0)
         helpmenu = tk.Menu(file_menu, tearoff=0)
@@ -52,35 +51,34 @@ class Contents:
         file_menu.add_command(label="RecruitingTasks", command=self.get_recruiting)
         file_menu.add_command(label="Tech&Python", command=self.get_tech)
 
-
         # Help
         file_menu.add_cascade(label="Help", menu=helpmenu)
         helpmenu.add_command(label="About program")
         helpmenu.add_command(label="About...")
 
     def get_air(self):
-        Air(tk.Tk())
+        Air(self.root)
 
     def get_arduino(self):
-        Arduino(tk.Tk())
+        Arduino(self.root)
 
     def get_engineering(self):
-        Engineering(tk.Tk())
+        Engineering(self.root)
 
     def get_games(self):
-        Games(tk.Tk())
+        Games(self.root)
 
     def get_missile(self):
-        Missile(tk.Tk())
+        Missile(self.root)
 
     def get_programming(self):
-        Programming(tk.Tk())
+        Programming(self.root)
 
     def get_recruiting(self):
-        Recruiting(tk.Tk())
+        Recruiting(self.root)
 
     def get_tech(self):
-        Tech(tk.Tk())
+        Tech(self.root)
 
     def get_github(self):
         webbrowser.open_new(r"https://github.com/AdrianSzklarski")
@@ -130,4 +128,8 @@ class Contents:
         self.my_canvas.create_window(self._positionX*19.2, self._positionY*11, anchor="nw", window=self.link_btn,
                                      height=60, width=60)
 
-
+if __name__ == '__main__':
+    """The main program call"""
+    root = tk.Tk()
+    app = Contents(root)
+    root.mainloop()
