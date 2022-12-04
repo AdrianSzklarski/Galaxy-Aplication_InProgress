@@ -53,7 +53,6 @@ class Contents:
         airButton.add_command(label="Flight dynamics --LOCKED--", command=self.get_air)
         airButton.add_command(label="Automation and control --LOCKED--", command=self.get_air)
         airButton.add_command(label="Projects --LOCKED--", command=self.get_air)
-        airButton.add_command(label="--LOCKED--", command=self.get_air)
 
         # arduino
         file_menu.add_cascade(label="Arduino", menu=arduinoButton)
@@ -65,11 +64,13 @@ class Contents:
 
         # engineering
         file_menu.add_cascade(label="Engineering", menu=engineeringButton)
-        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
-        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
-        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
-        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
-        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Mathematics --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Mechanics --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Fluid mechanics --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Aerodynamics --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Automation and control --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Thermodynamics --LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="Physics --LOCKED--", command=self.get_engineering)
 
         # games
         file_menu.add_cascade(label="Games", menu=gamesButton)
@@ -80,20 +81,21 @@ class Contents:
         gamesButton.add_command(label="--LOCKED--", command=self.get_games)
 
         # missile
-        file_menu.add_cascade(label="Missilet", menu=missileButton)
-        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
-        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
-        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
-        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
-        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+        file_menu.add_cascade(label="Missile", menu=missileButton)
+        missileButton.add_command(label="Aerodynamics --LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="Flight dynamics --LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="Ballistics --LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="Rocket propulsion --LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="Automation and control --LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="Projects --LOCKED--", command=self.get_missile)
 
         # programming
         file_menu.add_cascade(label="Programming", menu=programmingButton)
-        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
-        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
-        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
-        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
-        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="Basic level --LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="Intermediate level  --LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="Advanced level --LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="Master level --LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="Specialized level --LOCKED--", command=self.get_programming)
 
         # recruitingTasks
         file_menu.add_cascade(label="Recruiting", menu=recruitingTasksButton)
