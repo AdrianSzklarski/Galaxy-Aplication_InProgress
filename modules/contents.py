@@ -28,24 +28,89 @@ class Contents:
         self.root.config(menu=file_menu)
 
         filemenu = tk.Menu(file_menu, tearoff=0)
+        airButton = tk.Menu(file_menu, tearoff=0)
+        arduinoButton = tk.Menu(file_menu, tearoff=0)
+        engineeringButton = tk.Menu(file_menu, tearoff=0)
+        gamesButton = tk.Menu(file_menu, tearoff=0)
+        missileButton = tk.Menu(file_menu, tearoff=0)
+        programmingButton = tk.Menu(file_menu, tearoff=0)
+        recruitingTasksButton = tk.Menu(file_menu, tearoff=0)
+        techButton = tk.Menu(file_menu, tearoff=0)
         helpmenu = tk.Menu(file_menu, tearoff=0)
 
         file_menu.add_cascade(label="File", menu=filemenu)
 
-        # File
+        # file
         filemenu.add_command(label="New")
         filemenu.add_command(label="Save")
         filemenu.add_command(label="Save as...")
+        filemenu.add_separator()
+        filemenu.add_command(label="Exit", command=quit)
 
-        # Image
-        file_menu.add_command(label="Aircraft", command=self.get_air)
-        file_menu.add_command(label="Arduino&Python", command=self.get_arduino)
-        file_menu.add_command(label="Engineering", command=self.get_engineering)
-        file_menu.add_command(label="Games", command=self.get_games)
-        file_menu.add_command(label="Missile", command=self.get_missile)
-        file_menu.add_command(label="Programming", command=self.get_programming)
-        file_menu.add_command(label="RecruitingTasks", command=self.get_recruiting)
-        file_menu.add_command(label="tech&Python", command=self.get_tech)
+        # air
+        file_menu.add_cascade(label="Aircraft", menu=airButton)
+        airButton.add_command(label="Aerodynamics --LOCKED--", command=self.get_air)
+        airButton.add_command(label="Flight dynamics --LOCKED--", command=self.get_air)
+        airButton.add_command(label="Automation and control --LOCKED--", command=self.get_air)
+        airButton.add_command(label="Projects --LOCKED--", command=self.get_air)
+        airButton.add_command(label="--LOCKED--", command=self.get_air)
+
+        # arduino
+        file_menu.add_cascade(label="Arduino", menu=arduinoButton)
+        arduinoButton.add_command(label="--LOCKED--", command=self.get_arduino)
+        arduinoButton.add_command(label="--LOCKED--", command=self.get_arduino)
+        arduinoButton.add_command(label="--LOCKED--", command=self.get_arduino)
+        arduinoButton.add_command(label="--LOCKED--", command=self.get_arduino)
+        arduinoButton.add_command(label="--LOCKED--", command=self.get_arduino)
+
+        # engineering
+        file_menu.add_cascade(label="Engineering", menu=engineeringButton)
+        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+        engineeringButton.add_command(label="--LOCKED--", command=self.get_engineering)
+
+        # games
+        file_menu.add_cascade(label="Games", menu=gamesButton)
+        gamesButton.add_command(label="--LOCKED--", command=self.get_games)
+        gamesButton.add_command(label="--LOCKED--", command=self.get_games)
+        gamesButton.add_command(label="--LOCKED--", command=self.get_games)
+        gamesButton.add_command(label="--LOCKED--", command=self.get_games)
+        gamesButton.add_command(label="--LOCKED--", command=self.get_games)
+
+        # missile
+        file_menu.add_cascade(label="Missilet", menu=missileButton)
+        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+        missileButton.add_command(label="--LOCKED--", command=self.get_missile)
+
+        # programming
+        file_menu.add_cascade(label="Programming", menu=programmingButton)
+        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+        programmingButton.add_command(label="--LOCKED--", command=self.get_programming)
+
+        # recruitingTasks
+        file_menu.add_cascade(label="Recruiting", menu=recruitingTasksButton)
+        recruitingTasksButton.add_command(label="--LOCKED--", command=self.get_recruiting)
+        recruitingTasksButton.add_command(label="--LOCKED--", command=self.get_recruiting)
+        recruitingTasksButton.add_command(label="--LOCKED--", command=self.get_recruiting)
+        recruitingTasksButton.add_command(label="--LOCKED--", command=self.get_recruiting)
+        recruitingTasksButton.add_command(label="--LOCKED--", command=self.get_recruiting)
+
+        # tech&Python
+        file_menu.add_cascade(label="Technology", menu=techButton)
+        techButton.add_command(label="--LOCKED--", command=self.get_tech)
+        techButton.add_command(label="--LOCKED--", command=self.get_tech)
+        techButton.add_command(label="--LOCKED--", command=self.get_tech)
+        techButton.add_command(label="--LOCKED--", command=self.get_tech)
+        techButton.add_command(label="--LOCKED--", command=self.get_tech)
+
 
         # Help
         file_menu.add_cascade(label="Help", menu=helpmenu)
